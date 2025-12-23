@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd1w1wgewvct7"]
+
+[ext_resource type="Script" uid="uid://dk2mpwbafvsjo" path="res://Scene/Actors/Character/NpC's/np_character.gd" id="1_ylcx7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k7nbq"]
+radius = 38.118237
+
+[sub_resource type="BoxMesh" id="BoxMesh_ylcx7"]
+
+[node name="NPCharacter" type="Node2D" groups=["npc"]]
+script = ExtResource("1_ylcx7")
+
+[node name="Detection_Zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_Zone"]
+position = Vector2(-2, 98)
+shape = SubResource("CircleShape2D_k7nbq")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1, 1, 0, 1)
+scale = Vector2(40, 46)
+mesh = SubResource("BoxMesh_ylcx7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
