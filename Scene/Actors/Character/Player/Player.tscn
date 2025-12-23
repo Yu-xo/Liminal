@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://di1qixy4skcc"]
+
+[ext_resource type="Script" uid="uid://qawy7s6vmyr3" path="res://Scene/Actors/Character/Player/player.gd" id="1_5ym2x"]
+[ext_resource type="Script" uid="uid://bu7dvmophucgv" path="res://Scene/Actors/Character/Player/turn_based_ui.gd" id="2_fl4am"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fl4am"]
+radius = 19.0
+height = 68.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hn4in"]
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("TurnBasedUI")]
+script = ExtResource("1_5ym2x")
+TurnBasedUI = NodePath("TurnBasedUI/TurnBasedUI")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fl4am")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(0, 5.4836273e-06)
+scale = Vector2(34, 30.999998)
+mesh = SubResource("CapsuleMesh_hn4in")
+
+[node name="TurnBasedUI" type="CanvasLayer" parent="."]
+
+[node name="TurnBasedUI" type="Control" parent="TurnBasedUI" node_paths=PackedStringArray("Action_one", "Action_two", "Action_three")]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -129.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("2_fl4am")
+Action_one = NodePath("TurnHolder/Attack_1")
+Action_two = NodePath("TurnHolder/Attack _2")
+Action_three = NodePath("TurnHolder/Attack_3")
+
+[node name="TurnHolder" type="Panel" parent="TurnBasedUI/TurnBasedUI"]
+layout_mode = 0
+offset_right = 121.0
+offset_bottom = 124.0
+
+[node name="Attack_1" type="Button" parent="TurnBasedUI/TurnBasedUI/TurnHolder"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 3.0
+offset_right = 90.0
+offset_bottom = 34.0
+text = "Action1"
+
+[node name="Attack _2" type="Button" parent="TurnBasedUI/TurnBasedUI/TurnHolder"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 46.0
+offset_right = 90.0
+offset_bottom = 77.0
+text = "Action2"
+
+[node name="Attack_3" type="Button" parent="TurnBasedUI/TurnBasedUI/TurnHolder"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 93.0
+offset_right = 91.0
+offset_bottom = 124.0
+text = "Action3
+"
