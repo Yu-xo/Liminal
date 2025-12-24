@@ -2,7 +2,8 @@ extends Node2D
 
 
 
-@onready var time_cycle: Label = $TimeCycle
+@onready var time_cycle: Label = $Panel/TimeCycle
+
 
 
 func _physics_process(delta: float) -> void:

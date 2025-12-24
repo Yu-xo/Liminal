@@ -18,8 +18,6 @@ func movement():
 	pass
 	
 func interaction():
-	if item_held==true:
-		print("this npc have the Item!")
-	else:
-		print("no held item was held by this NPC")
+	Dialogic.start("RuruTimeLine")
+
 		

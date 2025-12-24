@@ -5,8 +5,11 @@ extends CharacterBody2D
 
 @export var TurnBasedUI : Control
 
-var direction
 
+@onready var npc = get_tree().get_first_node_in_group("npc")
+
+var direction
+var can_interact : bool = true
 
 var day : bool
 var night : bool
@@ -17,7 +20,12 @@ func _physics_process(delta: float) -> void:
 
 	turn_based_mode()
 	Exploration_mode()
-
+	if TimeCycle.has_shovel==true:
+		print("shovel aquired")
+	elif TimeCycle.has_basket==true:
+		print("can use magic")
+	elif TimeCycle.has_Water==true:
+		print("can self heal now")
 
 
 
@@ -45,8 +53,23 @@ func Exploration_mode():
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("interact") and day:
+	if Input.is_action_just_pressed("interact") and day==false and can_interact==true:
+		npc.interaction()
 		print("interact")
 
 		
-	
+
+
+
+
+
+
+
+func _on_interaction_zone_area_entered(area: Area2D) -> void:
+	if area.is_in_group("npc"):
+		can_interact = true
+
+
+func _on_interaction_zone_area_exited(area: Area2D) -> void:
+	if area.is_in_group("npc"):
+		can_interact = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://di1qixy4skcc"]
+[gd_scene load_steps=6 format=3 uid="uid://di1qixy4skcc"]
 
 [ext_resource type="Script" uid="uid://qawy7s6vmyr3" path="res://Scene/Actors/Character/Player/player.gd" id="1_5ym2x"]
 [ext_resource type="Script" uid="uid://bu7dvmophucgv" path="res://Scene/Actors/Character/Player/turn_based_ui.gd" id="2_fl4am"]
@@ -8,6 +8,10 @@ radius = 19.0
 height = 68.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hn4in"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agj8g"]
+radius = 29.0
+height = 130.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("TurnBasedUI")]
 script = ExtResource("1_5ym2x")
@@ -66,3 +70,12 @@ offset_right = 91.0
 offset_bottom = 124.0
 text = "Action3
 "
+
+[node name="Interaction_Zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_Zone"]
+position = Vector2(56, 0)
+shape = SubResource("CapsuleShape2D_agj8g")
+
+[connection signal="area_entered" from="Interaction_Zone" to="." method="_on_interaction_zone_area_entered"]
+[connection signal="area_exited" from="Interaction_Zone" to="." method="_on_interaction_zone_area_exited"]
