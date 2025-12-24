@@ -1,0 +1,10 @@
+join Ruru right [extra_data="nothing"]
+join Player_potrait left
+Ruru: who are you ?
+if {res} == "ye":
+	- mettle
+		Ruru: oh hello mettle , i thought you were a random bug
+		Player_potrait: what is this place?
+		Ruru: this is ___ place? i dont think you are from here!
+	- a little bug
+		Ruru: even i can see that ! fool
