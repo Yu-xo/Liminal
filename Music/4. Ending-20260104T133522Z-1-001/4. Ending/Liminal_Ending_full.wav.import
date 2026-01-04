@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxx8342yjdgsi"
+path="res://.godot/imported/Liminal_Ending_full.wav-ed7ad718b78ebd0b0ac411843a244bd1.sample"
+
+[deps]
+
+source_file="res://Music/4. Ending-20260104T133522Z-1-001/4. Ending/Liminal_Ending_full.wav"
+dest_files=["res://.godot/imported/Liminal_Ending_full.wav-ed7ad718b78ebd0b0ac411843a244bd1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

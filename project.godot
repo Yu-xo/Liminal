@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lem"
-run/main_scene="uid://bsf42nm7yw7rp"
+run/main_scene="uid://7pk8aguvukmp"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

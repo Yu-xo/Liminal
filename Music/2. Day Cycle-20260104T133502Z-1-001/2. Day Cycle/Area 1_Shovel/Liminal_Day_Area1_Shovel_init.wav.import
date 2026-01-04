@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c223gihuwl8al"
+path="res://.godot/imported/Liminal_Day_Area1_Shovel_init.wav-2f68c55c6337ff30d5e7f5a542298580.sample"
+
+[deps]
+
+source_file="res://Music/2. Day Cycle-20260104T133502Z-1-001/2. Day Cycle/Area 1_Shovel/Liminal_Day_Area1_Shovel_init.wav"
+dest_files=["res://.godot/imported/Liminal_Day_Area1_Shovel_init.wav-2f68c55c6337ff30d5e7f5a542298580.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

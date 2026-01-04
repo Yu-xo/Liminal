@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccytjw1ir7u7h"]
+[gd_scene load_steps=4 format=3 uid="uid://ccytjw1ir7u7h"]
 
 [ext_resource type="Script" uid="uid://tf8addjeeavp" path="res://final_entity.gd" id="1_cg806"]
+[ext_resource type="Texture2D" uid="uid://ced1102mybskc" path="res://Assets/Backgrounds/Enterypage.webp" id="2_loxxd"]
+[ext_resource type="AudioStream" uid="uid://cn5lt0b8xaxrd" path="res://Music/4. Ending-20260104T133522Z-1-001/4. Ending/Liminal_Ending_full.mp3" id="3_8yqn4"]
 
 [node name="Final_Entity" type="Node2D"]
 script = ExtResource("1_cg806")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_loxxd")
+centered = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8yqn4")
+autoplay = true

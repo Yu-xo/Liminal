@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ce0foi8dgsqq7"
+path="res://.godot/imported/Liminal_Day_Area2_Water_init.mp3-14fb90c355278b886f196cbf11971c8b.mp3str"
+
+[deps]
+
+source_file="res://Music/2. Day Cycle-20260104T133502Z-1-001/2. Day Cycle/Area 2_Water/Liminal_Day_Area2_Water_init.mp3"
+dest_files=["res://.godot/imported/Liminal_Day_Area2_Water_init.mp3-14fb90c355278b886f196cbf11971c8b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

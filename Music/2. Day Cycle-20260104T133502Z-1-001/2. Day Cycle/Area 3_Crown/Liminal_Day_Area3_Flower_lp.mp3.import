@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t0ike2mqr2dh"
+path="res://.godot/imported/Liminal_Day_Area3_Flower_lp.mp3-f1c787ee02506cca0f76cf6f94792c4c.mp3str"
+
+[deps]
+
+source_file="res://Music/2. Day Cycle-20260104T133502Z-1-001/2. Day Cycle/Area 3_Crown/Liminal_Day_Area3_Flower_lp.mp3"
+dest_files=["res://.godot/imported/Liminal_Day_Area3_Flower_lp.mp3-f1c787ee02506cca0f76cf6f94792c4c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

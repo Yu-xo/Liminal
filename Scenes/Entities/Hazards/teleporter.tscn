@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfmpkw1mut5jc"]
+
+[ext_resource type="Script" uid="uid://ber4c1dn7nhnv" path="res://teleporter.gd" id="1_04skx"]
+[ext_resource type="Texture2D" uid="uid://cxxdmffy4nqxw" path="res://Assets/teleporter.png" id="2_wo5vm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wo5vm"]
+
+[node name="Teleporter" type="Node2D"]
+script = ExtResource("1_04skx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wo5vm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wo5vm")

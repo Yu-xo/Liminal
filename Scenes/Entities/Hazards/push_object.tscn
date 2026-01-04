@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjmb31bnr30fo"]
+
+[ext_resource type="Script" uid="uid://wdaref5avan2" path="res://Scenes/Entities/Hazards/push_object.gd" id="1_oki28"]
+[ext_resource type="Texture2D" uid="uid://no8wunopctq" path="res://Assets/Pixel Art Top Down - Basic v1.2.2/Texture/Extra/TX Props with Shadow.png" id="2_4lwwn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6kqt"]
+
+[node name="Push_object" type="StaticBody2D" node_paths=PackedStringArray("push_rays")]
+script = ExtResource("1_oki28")
+push_rays = [NodePath("right"), NodePath("left"), NodePath("down"), NodePath("top")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, 0)
+scale = Vector2(0.6000001, 0.5263158)
+texture = ExtResource("2_4lwwn")
+region_enabled = true
+region_rect = Rect2(148.98508, 12.05043, 50.41324, 57.02482)
+
+[node name="top" type="RayCast2D" parent="."]
+target_position = Vector2(0, -29)
+
+[node name="right" type="RayCast2D" parent="."]
+target_position = Vector2(30, 0)
+
+[node name="left" type="RayCast2D" parent="."]
+target_position = Vector2(-37, 0)
+
+[node name="down" type="RayCast2D" parent="."]
+target_position = Vector2(0, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u6kqt")

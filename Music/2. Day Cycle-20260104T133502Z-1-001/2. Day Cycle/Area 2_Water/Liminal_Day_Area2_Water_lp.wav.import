@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cenkx1r2ug7k0"
+path="res://.godot/imported/Liminal_Day_Area2_Water_lp.wav-36999e747809cad3a273177ceb5f69c2.sample"
+
+[deps]
+
+source_file="res://Music/2. Day Cycle-20260104T133502Z-1-001/2. Day Cycle/Area 2_Water/Liminal_Day_Area2_Water_lp.wav"
+dest_files=["res://.godot/imported/Liminal_Day_Area2_Water_lp.wav-36999e747809cad3a273177ceb5f69c2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
