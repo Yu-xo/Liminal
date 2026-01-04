@@ -1,26 +1,28 @@
 join Entity 
 
-Entity: Hello, child.
+Entity: My sweet creation, you who resides in peace. Use your resilience. Would you like to reach the essence of life? Existence.
 
-Entity: You exist in the In-Between.
-Entity: Neither living, nor absent.
+Entity: Here is the In-between.
+Entity: You don't eat, sleep, or breathe. You just simply are.
 
-Entity: I brought you forth so you may decide.
-Entity: Whether you wish to live.
+Entity: Now that I have granted you sentience, I want you to decide whether this is enough, or...
 
-Entity: You will speak with others.
-Entity: You will listen.
-Entity: You will understand.
+Entity: whether the you seek a different existence. 
 
-Entity: Only then may you answer.
+Entity: Meet those who have sought the same path.
+Entity: Listen.
+Entity: Understand.
+
+Entity: Then find your Resolve.
 
 - ...
-    - I will listen.
-        Entity: Then go.
+    - Listen...
+        Entity: Go forth.
         Entity: Experience what it means to be.
-
+    
     - Why me?
-        Entity: Because even uncertainty
-        Entity: is a form of existence.
+        Entity: Why not you?
+        Entity: Creature of mine, all I want is for you is
+        to simply make a choice. 
 
-Entity: Begin with the one who bears the earth.
+Entity: That's all...
