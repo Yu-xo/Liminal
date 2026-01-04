@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://eept3rxscwvu"]
+
+[ext_resource type="Script" uid="uid://b5c7qk54erlsp" path="res://Scenes/Characters/player/player.gd" id="1_01s40"]
+[ext_resource type="Texture2D" uid="uid://ctpypnc2tn4vy" path="res://Assets/pixel/mettle.png" id="2_57y5e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f1dlp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_surom"]
+
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("move_rays") groups=["player"]]
+script = ExtResource("1_01s40")
+move_rays = [NodePath("Node/RayCast2D"), NodePath("Node/RayCast2D2"), NodePath("Node/RayCast2D3"), NodePath("Node/RayCast2D4")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_f1dlp")
+
+[node name="detection_zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_zone"]
+shape = SubResource("CapsuleShape2D_surom")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_57y5e")
+
+[node name="Node" type="Node2D" parent="."]
+visible = false
+
+[node name="RayCast2D" type="RayCast2D" parent="Node"]
+scale = Vector2(0.59, 0.59)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Node"]
+rotation = -3.1376004
+scale = Vector2(0.59, 0.59)
+
+[node name="RayCast2D3" type="RayCast2D" parent="Node"]
+rotation = 1.5648252
+scale = Vector2(0.59, 0.59)
+
+[node name="RayCast2D4" type="RayCast2D" parent="Node"]
+rotation = -1.5701663
+scale = Vector2(0.59, 0.59)
+
+[connection signal="body_entered" from="detection_zone" to="." method="_on_detection_zone_body_entered"]

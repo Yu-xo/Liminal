@@ -1,0 +1,34 @@
+join Entity 
+
+Entity: You have returned.
+
+Entity: You listened.
+Entity: You endured.
+Entity: You chose.
+
+Entity: Tell me.
+Entity: What have you gained?
+
+Entity: Humility from the earth.
+Entity: Release from the flow of time.
+Entity: Courage to stand by your choice.
+
+Entity: Now answer me.
+
+- What is your answer?
+    - I want to live.
+        Entity: Then you accept the weight of existence.
+        Entity: Struggle.
+        Entity: Change.
+        Entity: Uncertainty.
+        Entity: And still, you choose to be.
+        Entity: Go.
+        Entity: Live.
+        emit_signal("ending_live")
+
+    - I do not want to live.
+        Entity: Then you refuse the burden.
+        Entity: There is no failure in this.
+        Entity: Not all answers require movement.
+        Entity: Remain.
+        emit_signal("ending_not_live")
