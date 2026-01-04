@@ -1,10 +1,10 @@
 join Entity 
 
-Entity: You have returned.
+Entity: My child, you've returned.
 
 Entity: You listened.
 Entity: You endured.
-Entity: You chose.
+Entity: You found your Resolve.
 
 Entity: Tell me.
 Entity: What have you gained?
@@ -25,7 +25,7 @@ Entity: Now answer me.
         Entity: Go.
         Entity: Live.
         emit_signal("ending_live")
-
+    
     - I do not want to live.
         Entity: Then you refuse the burden.
         Entity: There is no failure in this.
